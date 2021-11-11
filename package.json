@@ -1,0 +1,24 @@
+{
+  "name": "futurdigital-signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/mainStyles.css -w",
+    "devserver": "live-server",
+    "start": "set PORT=8001 && npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YassirKJS/futurDigital-signup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YassirKJS/futurDigital-signup/issues"
+  },
+  "homepage": "https://github.com/YassirKJS/futurDigital-signup#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
