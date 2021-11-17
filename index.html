@@ -8,56 +8,77 @@
   rel="stylesheet" 
   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
   crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/mainStyles.css">
   <title>Futur Digital</title>
 </head>
 <body>
-  <div class="container">
-    <section id="formHolder">
-      <div class="row">
-        <!-- Signup Form Box-->
-        <div class="col-md-6 form">          
-          <h5>Inscrivez-vous</h5>
-          <form class="signup-form" action="#" method="post">
-            <div class="form-group">
-              <input type="text" name="name" id="name" class="name" placeholder="Nom Complet">
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" id="email" class="email" placeholder="Adresse Email">
-              <span class="error"></span>
-            </div>
-            <div class="form-group">
-              <input type="password" name="password" id="password" class="password" placeholder="Mot de passe">
-              <span class="error"></span>
-            </div>
-            <div class="form-group">
-              <input type="password" name="passwordCon" id="passwordCon" class="passwordCon" placeholder="Confirmer mot de passe">
-              <span class="error"></span>
-            </div>
-            <div class="submit-wrap">
-              <div class="form-group">
-                <input type="checkbox" name="remember" id="remember" class="remember" checked>
-                <label for="remember">Se souvenir de moi</label>
-              </div>
-              <input type="submit" value="S'inscrire" id="submit" class="submit">            
-            </div>
-            <ul>
-              <li>
-                <button class="facebook">S'inscrire avec Facebook</button>
-              </li>
-              <li>
-                <button class="facebook">S'inscrire avec Google</button>
-              </li>
-            </ul>
-          </form>    
-        </div><!-- End Signup Form --> 
-        
-        <!-- Image/Brand Box -->
-        <div class="col-md-6 brand">
-          <a href="#" class="logo">Futur Digital</a>
+  <div class="container" id="container">
+
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h5>Inscrivez-vous</h5>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        </div>
+        <span>Ou utilisez votre email</span>
+        <div class="input-group">
+          <input type="text" placeholder="Nom complet" />
+          <input type="email" placeholder="Adresse email" />
+          <input type="password" placeholder="Mot de passe" />
+          <input type="password" placeholder="Confirmer mot de passe" />
+        </div>
+        <div class="remember">
+          <input type="checkbox" id="check" class="check" checked> <label for="check"><span class="icon"></span> Se souvenir de moi</label>
+        </div>
+        <button>S'inscrire</button>
+      </form>
+    </div>
+
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h5>Connectez-vous</h5>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        </div>
+        <span>Ou utilisez votre email</span>
+        <input type="email" placeholder="Adresse email" />
+        <input type="password" placeholder="Mot de passe" />
+        <a href="#">Mot de passe oublié?</a>
+        <button>Se connecter</button>
+      </form>
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-right">
+          <h1>Rebonjour!</h1>
+          <p>Pour rester connecté avec nous, veuillez vous connecter!</p>
+          <button class="ghost" id="signIn">Se connecter</button>
+        </div>
+        <div class="overlay-panel overlay-left">
+          <h1>Bienvenue!</h1>
+          <p>Inscrivez-vous et commencez votre journée avec nous!</p>
+          <button class="ghost" id="signUp">S'inscrire</button>
         </div>
       </div>
-    </section>
+    </div>
+</div>
+
+  <div class="footer">
+    <b>	Suivez-nous </b>
+    <div class="icons">
+      <a href="https://www.instagram.com/futurdigital.web" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/futurdigital/" target="_blank" class="social"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/FuturDigitalWeb" target="_blank" class="social"><i class="fab fa-twitter-square"></i></a>
+      <a href="https://fr.linkedin.com/company/futur-digital" target="_blank" class="social"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
+
+  <script type="text/javascript" src="./js/mainFunctions.js"></script>
 </body>
 </html>

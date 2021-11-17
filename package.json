@@ -6,7 +6,11 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/mainStyles.css -w",
     "devserver": "live-server",
-    "start": "set PORT=8001 && npm-run-all --parallel devserver watch:sass"
+    "start": "set PORT=8001 && npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/mainStyles.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/mainStyles.comp.css -o css/mainStyles.prefix.css",
+    "compress:css": "node-sass css/mainStyles.prefix.css css/mainStyles.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,8 @@
   },
   "homepage": "https://github.com/YassirKJS/futurDigital-signup#readme",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "autoprefixer": "^10.4.0",
+    "node-sass": "^6.0.1",
+    "postcss-cli-simple": "^3.1.0"
   }
 }
