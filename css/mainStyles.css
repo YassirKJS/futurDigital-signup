@@ -68,16 +68,24 @@ a {
 
 .form-container input {
   background: #eee;
+  outline: none;
   border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  outline: none !important;
-  border: 0; }
+  padding: 9px 15px;
+  margin: 8px 0; }
+
+.form-container input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.eyecon {
+  border: none;
+  margin: 8px 0; }
 
 button {
   border-radius: 20px;
   border: 1px solid #ff4b2b;
-  background: #ff445c;
+  background: #e65456;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -124,8 +132,7 @@ button.ghost {
   z-index: 100; }
 
 .overlay {
-  background: #ff416c;
-  background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0/cover;
+  background-image: url("../resources/bg.jpg");
   color: #fff;
   position: relative;
   left: -100%;
