@@ -1,0 +1,28 @@
+.eyecon {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  margin: .5em 1px .5em 0;
+  padding: 0 1.25em;
+  font-size: 1.25em;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+.icons {
+	display: flex;
+	width: 3em;
+	height: 2em;
+	letter-spacing: 1em;
+	align-items: center;  
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.check {
+  cursor: pointer;
+}

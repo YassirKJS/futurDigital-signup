@@ -1,60 +1,163 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+/*
+0 - 576px:      Phone
+576 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Normal style
+1800px+:        Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
+*/
+/*
+0 - 576px:      Phone
+576 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Normal style
+1800px+:        Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
+*/
+html {
+  font-size: 62.5%;
+  /*now 1rem = 10px  10px/16px=62.5%  100% being 16px  acts like overall setting that defines what 1 rem should be*/ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #f6f5f7;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: -20px 0 50px;
-  margin-top: 20px; }
-
-h1 {
-  font-weight: bold;
-  margin: 0; }
-
-p {
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 20px;
-  letter-spacing: .5px;
-  margin: 20px 0 30px; }
-
-span {
-  font-size: 12px; }
+  margin: -1.25em 0 3.125em;
+  margin-top: 1.25em; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 a {
-  color: #333;
-  font-size: 14px;
+  display: inline-block;
+  text-decoration: none; }
+
+input {
+  outline: none !important; }
+
+/*
+0 - 576px:      Phone
+576 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Normal style
+1800px+:        Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
+*/
+@font-face {
+  font-family: "Coves Bold";
+  src: url("../../css/fonts/Coves Bold.otf"); }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #000; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0.2rem 0.4rem #fff;
+  font-size: 3em;
+  font-weight: 500;
+  letter-spacing: 2px; }
+  @media (max-width: 35em) {
+    .heading-primary {
+      font-size: 2.5em; } }
+
+.heading-secondary {
+  font-size: 1.7em;
+  font-weight: 500; }
+
+p {
+  font-size: 1.875em;
+  font-weight: 100;
+  line-height: 1.25em;
+  letter-spacing: .03em;
+  margin: 1.25em 0 1.875em;
+  text-shadow: 0 0.2rem 0.4rem #fff; }
+
+span {
+  font-size: 1.5em; }
+  @media (max-width: 56.25em) {
+    span {
+      font-size: 1.25em; } }
+  @media (max-width: 35em) {
+    span {
+      font-size: 1.5em; } }
+
+a {
+  color: #000;
+  font-size: 1.5em;
   text-decoration: none;
-  margin: 15px 0; }
+  margin: .9em 0; }
 
 .container {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: .625em;
+  box-shadow: 0 0.9em 1.8em rgba(0, 0, 0, 0.2), 0 0.625em 0.625em rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
-  width: 768px;
-  max-width: 100%;
-  min-height: 540px; }
+  width: 70em;
+  max-width: 90%;
+  min-height: 50em; }
 
 .form-container form {
   background: #fff;
   display: flex;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 4em;
   height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .form-container form {
+      padding: 0 2.5em; } }
+  @media (max-width: 35em) {
+    .form-container form {
+      padding: 0 1.25em; } }
 
 .social-container {
-  margin: 15px 0; }
+  margin: 1em 0; }
 
 .social-container a {
   border: 1px solid #ddd;
@@ -62,47 +165,39 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
-  height: 40px;
-  width: 40px; }
+  margin: 0 .35em;
+  height: 3em;
+  width: 3em; }
+  @media (max-width: 56.25em) {
+    .social-container a {
+      height: 2.5em;
+      width: 2.5em; } }
+  @media (max-width: 35em) {
+    .social-container a {
+      height: 4em;
+      width: 4em; } }
+
+.input-group > :first-child {
+  margin-left: -1px; }
+
+.col-12 {
+  width: 99.5%; }
 
 .form-container input {
   background: #eee;
+  font-size: 1.25em;
   outline: none;
   border: none;
-  padding: 9px 15px;
-  margin: 8px 0; }
+  padding: 1em 1em;
+  margin: .5em 0; }
+
+.input-group {
+  width: 100%; }
 
 .form-container input:focus {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none; }
-
-.eyecon {
-  border: none;
-  margin: 8px 0; }
-
-button {
-  border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background: #e65456;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in; }
-
-button:active {
-  transform: scale(0.95); }
-
-button:focus {
-  outline: none; }
-
-button.ghost {
-  background: transparent;
-  border-color: #fff; }
 
 .form-container {
   position: absolute;
@@ -114,12 +209,71 @@ button.ghost {
   left: 0;
   width: 50%;
   z-index: 2; }
+  @media (max-width: 35em) {
+    .sign-up-container {
+      width: 100%;
+      padding: 0 3em; } }
 
 .sign-in-container {
   left: 0;
   width: 50%;
   z-index: 1;
   opacity: 0; }
+
+.remember {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-left: 0;
+  align-self: start;
+  cursor: pointer; }
+  .remember-label {
+    font-size: 1.2em; }
+
+.error {
+  font-size: 1em;
+  color: red; }
+
+.eyecon {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  margin: .5em 1px .5em 0;
+  padding: 0 1.25em;
+  font-size: 1.25em; }
+  @media (max-width: 35em) {
+    .eyecon {
+      padding: 0; } }
+
+.icons {
+  display: flex;
+  width: 3em;
+  height: 2em;
+  letter-spacing: 1em;
+  align-items: center; }
+
+.icon {
+  cursor: pointer; }
+
+.check {
+  cursor: pointer; }
+
+.btn {
+  border-radius: 10px;
+  font-size: 1.15em;
+  font-weight: bold;
+  padding: 1em 1.75em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in; }
+
+.btn:active {
+  transform: scale(0.95); }
+
+.btn:hover {
+  transform: scale(0.98); }
+
+.btn:focus {
+  outline: none; }
 
 .overlay-container {
   position: absolute;
@@ -130,6 +284,9 @@ button.ghost {
   overflow: hidden;
   transition: transform .6s ease-in-out;
   z-index: 100; }
+  @media (max-width: 35em) {
+    .overlay-container {
+      width: 0%; } }
 
 .overlay {
   background-image: url("../resources/bg.jpg");
@@ -140,6 +297,9 @@ button.ghost {
   width: 200%;
   transform: translateY(0);
   transition: transform .6s ease-in-out; }
+  @media (max-width: 35em) {
+    .overlay {
+      width: 0%; } }
 
 .overlay-panel {
   position: absolute;
@@ -148,12 +308,15 @@ button.ghost {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 2.5em;
   height: 100%;
   width: 50%;
   text-align: center;
   transform: translateY(0);
   transition: transform .6s ease-in-out; }
+  @media (max-width: 56.25em) {
+    .overlay-panel {
+      padding: 0 1em; } }
 
 .overlay-right {
   right: 0;
@@ -189,18 +352,5 @@ button.ghost {
   transform: translateY(20%); }
 
 .footer {
-  margin-top: 25px;
+  margin-top: 3em;
   text-align: center; }
-
-.icons {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  letter-spacing: 15px;
-  align-items: center; }
-
-.remember {
-  margin-bottom: 15px;
-  margin-left: 0;
-  padding-left: 0;
-  align-self: start; }

@@ -16,8 +16,8 @@
 
 // MEDIA QUERY MANAGER
 /*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
+0 - 576px:      Phone
+576 - 900px:    Tablet portrait
 900 - 1200px:   Tablet landscape
 1200 - 1800px:  Normal style
 1800px+:        Big Desktop
@@ -32,7 +32,7 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
 */
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) { @content }; //600px/16 = 37.5em
+    @media (max-width: 35em) { @content }; //576px/16 = 37.5em
   }
   @if $breakpoint == tab-port {
     @media (max-width: 56.25em) { @content }; //900px

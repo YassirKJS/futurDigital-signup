@@ -1,13 +1,6 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
 
 html {
   font-size: 62.5%; /*now 1rem = 10px  10px/16px=62.5%  100% being 16px  acts like overall setting that defines what 1 rem should be*/
@@ -27,9 +20,20 @@ html {
   }
 }
 
-body {
+* {
   box-sizing: border-box;
-  padding: 3rem;
+}
+
+body {
+  //font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: -1.25em 0 3.125em;
+  margin-top: 1.25em;
   
 
   @include respond(tab-port) {
