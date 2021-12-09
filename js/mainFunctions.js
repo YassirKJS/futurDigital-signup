@@ -31,6 +31,32 @@ function password_show_hide(i) {
 }
 
 /*
-  Form Validation handling
+  * Form Validation handling:
+  *
+  * id will target our id
+  * serial will target our classes [error class, success and failure icons]
+  * message will print a message inside our .error class 
+  *
 */
 
+let form1 = document.getElementById("form1");
+let password1 = document.getElementById("password-1");
+let errorMsg = document.getElementsByClassName("error");
+
+form1.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  engine(username, 0, "Nom ne peut pas être vide");
+  engine(email, 1, "Email ne peut pas être vide");
+  engine(password1, 2, "Mot de passe ne peut pas être vide");
+});
+
+let engine = (id, serial, message) => {
+  if (id.value.trim() === "") {
+    errorMsg[serial].innerHTML = message;
+  } 
+  
+  else {
+    errorMsg[serial].innerHTML = "";
+  }
+}

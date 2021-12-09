@@ -20,7 +20,7 @@
 <body>
   <div class="container" id="container">
     <div class="form-container sign-up-container">
-      <form action="#">
+      <form id="form1" action="#">
         <div class="heading-secondary">Inscrivez-vous</div>
         <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -28,14 +28,16 @@
         </div>
         <span>Ou utilisez votre email</span>
         <div class="input-group">
-          <input class="col-md-12 col-sm-12 col-12" type="text" placeholder="Nom complet" />
-          <input class="col-md-12 col-sm-12 col-12" type="email" placeholder="Adresse email" />
+          <input id="username" class="col-md-12 col-sm-12 col-12" type="text" placeholder="Nom complet" />
+          <div class="error"></div>
+          <input id="email" class="col-md-12 col-sm-12 col-12" type="email" placeholder="Adresse email" />
+          <div class="error"></div>
           <input class="col-md-10 col-sm-10 col-10" type="password" id="password-1" placeholder="Mot de passe" />
           <span class="input-group-text col-md-2 col-sm-2 col-2 eyecon" onclick="password_show_hide(1);">
             <i class="fas fa-eye" id="show_eye-1"></i>
             <i class="fas fa-eye-slash d-none" id="hide_eye-1"></i>
           </span>
-          <span class="error">Minimum 8 caractères</span>
+          <div class="error"></div>
           <input class="col-md-10 col-sm-10 col-10 pass" type="password" id="password-2" placeholder="Confirmer mot de passe" />
           <span class="input-group-text col-md-2 col-sm-2 col-2 eyecon" onclick="password_show_hide(2);">
             <i class="fas fa-eye" id="show_eye-2"></i>
@@ -45,7 +47,7 @@
         <div class="remember">
           <input type="checkbox" id="check" class="check" checked> <label for="check"><span class="icon"></span><div class="remember-label">Se souvenir de moi</div> </label>
         </div>
-        <button type="button" class="btn btn-dark btn-sm">S'inscrire</button>
+        <button id="btn" type="submit" class="btn btn-dark btn-sm">S'inscrire</button>
       </form>
     </div>
 
