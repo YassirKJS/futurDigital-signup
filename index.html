@@ -18,7 +18,9 @@
   <title>Futur Digital</title>
 </head>
 <body>
+  <!-- Container contenant les formulaire de sign in et sign up -->
   <div class="container" id="container">
+    <!-- Formulaire de sign up -->
     <div class="form-container sign-up-container">
       <form id="form1" action="#">
         <div class="heading-secondary">Inscrivez-vous</div>
@@ -43,6 +45,7 @@
             <i class="fas fa-eye" id="show_eye-2"></i>
             <i class="fas fa-eye-slash d-none" id="hide_eye-2"></i>
           </span>
+          <div class="error"></div>
         </div>
         <div class="remember">
           <input type="checkbox" id="check" class="check" checked> <label for="check"><span class="icon"></span><div class="remember-label">Se souvenir de moi</div> </label>
@@ -51,6 +54,7 @@
       </form>
     </div>
 
+    <!-- Formulaire de sign in -->
     <div class="form-container sign-in-container">
       <form action="#">
         <div class="heading-secondary">Connectez-vous</div>
@@ -72,6 +76,7 @@
       </form>
     </div>
 
+    <!-- Container pour switch du log in vers du signup et vis-versa -->
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-right">
@@ -86,8 +91,9 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
 
+  <!-- footer for the page -->
   <div class="footer">
     <h3>	Suivez-nous </h3>
     <div class="icons">
